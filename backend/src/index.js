@@ -5,7 +5,6 @@ import cors from "cors";
 import { connectDB } from "./lib/db.js";
 import {clerkMiddleware} from "@clerk/express"
 
-console.log("DB URL is : ",process.env.DB_URL);
 const PORT = process.env.PORT;
 const frontend_url=process.env.FRONTEND_URL;
 const app = express();
