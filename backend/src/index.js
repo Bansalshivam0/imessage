@@ -16,6 +16,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({origin:frontend_url, credentials:true}));
 
+app.use("/api/webhooks/clerk",express.raw({type:"application/json"}),clerkWebhook);
+
 // if the public directory exists , serve the static files
 // this is for the production build
 
